@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class BinarySearch {
     public static void main(String[] args) {
         int[] list = new int[100000000];
