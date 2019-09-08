@@ -1,3 +1,5 @@
+import org.apache.commons.lang3.ArrayUtils;
+
 import java.util.Arrays;
 
 // Сортировка пузырьком
@@ -6,8 +8,11 @@ import java.util.Arrays;
 public class BubbleSort {
     public static void main(String[] args) {
         BubbleSort bubbleSort = new BubbleSort();
+
         int[] array = {10, 2, 10, 3, 1, 2, 5};
-        int[] result = bubbleSort.sort(array);
+        int[] result = bubbleSort.sort(Arrays.copyOf(array, array.length));
+
+        System.out.println(Arrays.toString(array));
         System.out.println(Arrays.toString(result));
     }
 
@@ -17,17 +22,11 @@ public class BubbleSort {
             needIteration = false;
             for (int i = 1; i < array.length; i++) {
                 if (array[i] < array[i - 1]) {
-                    swap(array, i, i - 1);
+                    ArrayUtils.swap(array, i, i - 1);
                     needIteration = true;
                 }
             }
         }
         return array;
-    }
-
-    private void swap(int[] array, int ind1, int ind2) {
-        int tmp = array[ind1];
-        array[ind1] = array[ind2];
-        array[ind2] = tmp;
     }
 }
