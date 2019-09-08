@@ -1,3 +1,5 @@
+// Бинарный поиск
+// Сложность: O(log n)
 public class BinarySearch {
     public static void main(String[] args) {
         int[] list = new int[100000000];
