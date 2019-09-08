@@ -13,13 +13,14 @@ public class SelectionSort {
         SelectionSort selectionSort = new SelectionSort();
 
         int[] array = {10, 2, 10, 3, 1, 2, 5};
-        int[] result = selectionSort.sort(Arrays.copyOf(array, array.length));
+        int[] result = selectionSort.sort(array);
 
         System.out.println(Arrays.toString(array));
         System.out.println(Arrays.toString(result));
     }
 
-    private int[] sort(int[] array) {
+    private int[] sort(int[] arr) {
+        int [] array = Arrays.copyOf(arr, arr.length);
         for (int min = 0; min < array.length -1; min++) {
             int least = min;
             for (int j = min; j < array.length; j++) {

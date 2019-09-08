@@ -10,13 +10,14 @@ public class BubbleSort {
         BubbleSort bubbleSort = new BubbleSort();
 
         int[] array = {10, 2, 10, 3, 1, 2, 5};
-        int[] result = bubbleSort.sort(Arrays.copyOf(array, array.length));
+        int[] result = bubbleSort.sort(array);
 
         System.out.println(Arrays.toString(array));
         System.out.println(Arrays.toString(result));
     }
 
-    private int[] sort(int[] array) {
+    private int[] sort(int[] arr) {
+        int [] array = Arrays.copyOf(arr, arr.length);
         boolean needIteration = true;
         while (needIteration) {
             needIteration = false;
