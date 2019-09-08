@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 // Сортировка пузырьком
+// Алгоримт: последовательно пройтись по всем элементам массива и поменять местами рядом стоящие, если a > b
 // Сложность: O(n^2)
 public class BubbleSort {
     public static void main(String[] args) {
